@@ -1,23 +1,16 @@
 import './App.css';
 import React from "react";
-import Request from "./Component/Request";
-import axios from "axios";
-// import { Routes, Route, Link } from "react-router-dom";
-// import AddTutorial from "./Component/AddTutorial";
-// import Tutorial from "./Component/Tutorial";
-// import TutorialsList from "./Component/TutorialList";
+import PersonList from "./Component/PersonList"
+import PersonAdd from "./Component/PersonAdd"
 
 function App() {
-  
-  axios.get('https://crudcrud.com/api/19eea68b6b88444d8111b78c96766153')
-  .then((response) => {
-    console.log(response.data);
-    console.log(response.status);
-    console.log(response.statusText);
-    console.log(response.headers);
-    console.log(response.config);
-  });
 
+  return(
+   <div className="App">
+     <PersonAdd />
+     <PersonList/>
+   </div> 
+  )
   
   
   
