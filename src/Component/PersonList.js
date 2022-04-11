@@ -14,6 +14,8 @@ class PersonList extends React.Component {
         //Performing a GET request
         //Sample get request axios.get(`https://jsonplaceholder.typicode.com/users`)
         axios.get('https://crudcrud.com/api/aa4ab9ca15c649f394e93ebbf76648bb/persons')
+        .catch(err => 
+            console.log(err))
         .then(res => {
             //response object
             const persons = res.data;

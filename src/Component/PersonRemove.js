@@ -18,12 +18,14 @@ class PersonRemove extends React.Component {
     //function handleSubmit
     handleSubmit = event => {
         //HTML DOM event method
-        event.preventDefault();
+
 
         //Performing a DELETE request
         //Sample post request axios.get(`https://jsonplaceholder.typicode.com/users/$`)
         API.delete(`persons/${this.state.id}`)
         //receive a response
+        .catch(err => 
+            console.log(err))
         .then(res => {
         console.log(res);
         console.log(res.data);
