@@ -31,7 +31,7 @@ class PersonAdd extends React.Component {
         };
         //Performing a POST request
         //Sample post request axios.get(`https://jsonplaceholder.typicode.com/users`)
-        axios.post('https://crudcrud.com/api/aa4ab9ca15c649f394e93ebbf76648bb', {user})
+        axios.post('https://crudcrud.com/api/aa4ab9ca15c649f394e93ebbf76648bb/persons', {user})
         //receive response
         .then(res => {
             console.log(res);

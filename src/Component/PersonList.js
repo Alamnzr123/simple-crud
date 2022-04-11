@@ -13,7 +13,7 @@ class PersonList extends React.Component {
     componentDidMount() {
         //Performing a GET request
         //Sample get request axios.get(`https://jsonplaceholder.typicode.com/users`)
-        axios.get('https://crudcrud.com/api/aa4ab9ca15c649f394e93ebbf76648bb')
+        axios.get('https://crudcrud.com/api/aa4ab9ca15c649f394e93ebbf76648bb/persons')
         .then(res => {
             //response object
             const persons = res.data;
@@ -37,3 +37,4 @@ class PersonList extends React.Component {
 }
 
 export default PersonList;
+
