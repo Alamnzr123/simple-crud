@@ -29,7 +29,7 @@ class PersonList extends React.Component {
                 .map(person =>
                     //props
                     <li key={person.id}>
-                        {person.name}
+                        {person.user.name}
                     </li>
                     )
                 }
