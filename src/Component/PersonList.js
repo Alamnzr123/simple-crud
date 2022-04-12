@@ -13,9 +13,7 @@ class PersonList extends React.Component {
     componentDidMount() {
         //Performing a GET request
         //Sample get request axios.get(`https://jsonplaceholder.typicode.com/users`)
-        axios.get('https://crudcrud.com/api/a19f1480fddf42739c2297b1570de3fb/persons')
-        .catch(err => 
-            console.log(err))
+        axios.get('https://crudcrud.com/api/7608c564504349968773e6eccb124e84/persons')
         .then(res => {
             //response object
             const persons = res.data;
@@ -30,13 +28,16 @@ class PersonList extends React.Component {
                 {this.state.persons
                 .map(person =>
                     //props
-                <li key={person.id}>{person.name}</li>
+                    <li key={person.id}>
+                        {person.name}
+                    </li>
                     )
                 }
+
             </ul>
+        
         )
     }
 }
 
 export default PersonList;
-

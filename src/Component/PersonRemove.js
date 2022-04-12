@@ -6,7 +6,7 @@ class PersonRemove extends React.Component {
     //State that variable declares on component
     state = {
         //object
-        id:""
+        id: ""
     }
 
     //function handleChange
@@ -24,12 +24,12 @@ class PersonRemove extends React.Component {
         //Sample post request axios.get(`https://jsonplaceholder.typicode.com/users/$`)
         API.delete(`persons/${this.state.id}`)
         //receive a response
-        .catch(err => 
-            console.log(err))
         .then(res => {
         console.log(res);
         console.log(res.data);
         })   
+        .catch(err => 
+            console.log(err));
     }
 
     //react-lifecycle render()
